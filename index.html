@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        /* 头部导航 */
+        header {
+            background-color: #2c3e50;
+            padding: 15px 0;
+        }
+        .nav-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        /* 轮播图（已修复图片显示） */
+        .banner {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            margin-bottom: 30px;
+            overflow: hidden; /* 隐藏图片超出部分 */
+        }
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 图片不变形填满容器 */
+        }
+        /* 主体内容 */
+        .main-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .article-list {
+            width: 70%;
+        }
+        .article-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+        .article-title {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .article-desc {
+            color: #34495e;
+            line-height: 1.6;
+        }
+        /* 侧边栏 */
+        .sidebar {
+            width: 25%;
+        }
+        .sidebar-card {
+            border: 1px solid #eee;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .sidebar-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            border-left: 3px solid #3498db;
+            padding-left: 10px;
+        }
+        .sidebar-link {
+            display: block;
+            color: #34495e;
+            text-decoration: none;
+            margin: 8px 0;
+        }
+        /* 底部 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .article-list, .sidebar {
+                width: 100%;
+            }
+            .sidebar {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">我的博客</div>
+            <div class="nav-links">
+                <a href=" ">首页</a>
+                <a href="#">文章</a>
+                <a href="#">分类</a>
+                <a href="#">关于我</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 轮播图（仅保留img标签，无多余文字） -->
+    <div class="banner">
+        <!-- 👇只需要改这里的图片路径，其他不用动 -->
+        <img src="海南软件职业技术学院.jpg" alt="博客封面">
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="main-container">
+        <!-- 文章列表 -->
+        <div class="article-list">
+            <div class="article-item">
+                <h2 class="article-title">【前端学习】HTML+CSS入门指南</h2>
+                <div class="article-meta">发布时间：2025-12-16 · 分类：前端技术</div>
+                <p class="article-desc">这是一篇关于HTML和CSS的入门教程，包含基础语法、布局技巧和常见问题解决方法，适合新手快速上手。</p >
+            </div>
+            <div class="article-item">
+                <h2 class="article-title">Python+MySQL项目实战总结</h2>
+                <div class="article-meta">发布时间：2025-12-10 · 分类：后端开发</div>
+                <p class="article-desc">分享一个Python连接MySQL的实战项目，涵盖数据库设计、增删改查操作和项目部署注意事项。</p >
+            </div>
+        </div>
+
+        <!-- 侧边栏 -->
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">热门分类</h3>
+                <a href="#" class="sidebar-link">前端开发</a >
+                <a href="#" class="sidebar-link">后端开发</a >
+                <a href="#" class="sidebar-link">数据库</a >
+            </div>
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">最新文章</h3>
+                <a href="#" class="sidebar-link">【前端学习】HTML+CSS入门指南</a >
+                <a href="#" class="sidebar-link">Python+MySQL项目实战总结</a >
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <p>© 2025 我的个人博客 版权所有</p >
+    </footer>
+</body>
+</html>
